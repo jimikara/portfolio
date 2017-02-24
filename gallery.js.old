@@ -1,0 +1,36 @@
+$(document).ready(function() {
+    
+//    var d = 80;
+//    $(".project").each(function(val) {
+//        $(this).velocity({ 
+//            opacity: 1 
+//        }, { 
+//            display: "inline-block",
+//            duration: 1000,
+//            delay: d,
+//        });
+//        $(this).velocity({
+//            translateY: "-120px"
+//        }, {
+//            duration: 500,
+//            delay: d,
+//            queue: false
+//        })
+//        d += d / 4   
+//    })
+    
+//    $(".overlay").hide();
+//    $(".caption").hide();
+    
+    $(".project")
+        .hover(function(){
+            $(this).children(".overlay").fadeIn("fast"); 
+            $(this).children(".overlay").children(".caption").slideDown("fast"); 
+        
+        }, function(){
+            $(this).children(".overlay").fadeOut("fast");  
+            $(this).children(".overlay").children(".caption").slideUp("fast");
+        
+        });
+    
+})
